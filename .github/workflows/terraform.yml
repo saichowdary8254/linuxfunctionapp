@@ -69,13 +69,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    
     - name: Azure Login (OIDC)
       uses: azure/login@v2
       with:
-        client-id: ${{ secrets.AZURE_CLIENT_ID }}    # <-- store the App Registration appId as a secret
-        tenant-id: ${{ secrets.AZURE_TENANT_ID }}    # <-- store your tenant as a secret
-        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}  # <-- store your subscription as a secret
-# No password/secret needed; OIDC handles token
+       client-id: ${{ secrets.AZURE_CLIENT_ID }}
+       tenant-id:  ${{ secrets.AZURE_TENANT_ID }}
+       subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
