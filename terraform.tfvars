@@ -1,0 +1,9 @@
+rg_name         = "DevRG"
+rg_location     = "westus"
+vnet_name       = "DevVNet01"
+address_space   = [ "10.10.0.0/16" ]
+subnet1_name    = "devsubnet01"
+address_prefix1 = [ "10.10.1.0/24" ]
+nic1_name       = "devvmnic01"
+vm1_name        = "devvm01"
+nsg1_name       = "devnsg01"
